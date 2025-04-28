@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Documento</title>
+</head>
+
+<body>
+    <div>
+        <h1>pokemon pocket</h1>
+        <p>clessidre rimanenti: {{ p }}</p>
+        {% if messaggio %}
+        <p>{{ messaggio }}</p>
+        {% endif %}
+
+        <form action="/pacchetto" method="post">
+            <button type="submit">apri una busta</button>
+        </form>
+
+        <form action="/pokedex" method="post">
+            <button type="submit">salva nel pokedex</button>
+        </form>
+
+        <div class="pokedex">
+            <h1>buste sbustate:</h1>
+            {% if pokedex %}
+            <ul>
+                {% for carta in pokedex %}
+                <li>{{ carta.Nome }} (Rarità: {{ carta.Rarità }}, Attacco: {{ carta.Attacco }}, Difesa: {{ carta.Difesa}})</li>
+                {% endfor %}
+            </ul>
+            {% else %}
+            <p>non hai nulla nel pokedex</p>
+            {% endif %}
+        </div>
+    </div>
+</body>
+</html>
