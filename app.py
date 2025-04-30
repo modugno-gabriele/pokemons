@@ -62,12 +62,7 @@ x = {
     "pokedex": []
 }
 
-card_rate = {
-    "Comune": 0.7,
-    "Non Comune": 0.2,
-    "Rara": 0.09,
-    "Ultra Rara": 0.01
-}
+
 
 def seleziona_carta():
     carta = random.choice(carte)
